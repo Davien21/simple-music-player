@@ -5,6 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
         <link href="./assets/css/style.css" rel="stylesheet"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <div id="bg">
@@ -20,7 +21,7 @@
                 <div id="songTitle">Demo</div>
                 <div id="buttons">
                     <button id="pre" onclick="pre()"><img src="./assets/imgs/Pre.png" height="90%" width="90%"/></button>
-                    <button id="play" onclick="playOrPauseSong()"><img src="./assets/imgs/Pause.png"/></button>
+                    <button id="play" onclick="playOrPauseSong(this)"><img src="./assets/imgs/Pause.png"/></button>
                     <button id="next" onclick="next()"><img src="./assets/imgs/Next.png" height="90%" width="90%"/></button>
                 </div>
                 

@@ -1,10 +1,10 @@
-
 let songs = 
     [
         "Ed Sheeran - Give Me Love [Official Video].mp3",
         "Ed Sheeran - I See Fire (Music Video).mp3",
         "Ed Sheeran - Photograph.mp3"
     ];
+
 for (let i in songs) {
     songs[i] = "./assets/audio/"+songs[i];
 }
@@ -30,45 +30,47 @@ function playSong(){
     song.play();    // play the song
 }
 
-function playOrPauseSong(){
-    
+function playOrPauseSong(btn){
+    togglePlayImg (btn);
     if(song.paused){
         song.play();
-        $("#play img").attr("src","Pause.png");
     }
     else{
         song.pause();
-        $("#play img").attr("src","Play.png");
     }
 }
 
 song.addEventListener('timeupdate',function(){ 
-    
     let position = song.currentTime / song.duration;
-    
     fillBar.style.width = position * 100 +'%';
 });
 
 function next(){
-    
     currentSong++;
     if(currentSong > 2){
         currentSong = 0;
     }
     playSong();
-    $("#play img").attr("src","Pause.png");
+    $("#play img").attr("src","./assets/imgs/Pause.png");
     $("#image img").attr("src",poster[currentSong]);
     $("#bg img").attr("src",poster[currentSong]);
 }
 
 function pre(){
-    
     currentSong--;
     if(currentSong < 0){
         currentSong = 2;
     }
     playSong();
-    $("#play img").attr("src","Pause.png");
+    $("#play img").attr("src","./assets/imgs/Pause.png");
     $("#image img").attr("src",poster[currentSong]);
     $("#bg img").attr("src",poster[currentSong]);
+}
+function togglePlayImg (btn) {
+    let img = btn.querySelector('img');
+    if (img.src.includes('Pause')) {
+        img.src = './assets/imgs/Play.png'
+    }else {
+        img.src = './assets/imgs/Pause.png'
+    }
 }
