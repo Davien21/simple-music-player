@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
+        <link href="./assets/css/style.css" rel="stylesheet"/>
+        <script src="./assets/js/jquery-1.10.2.min.js"></script>
+    </head>
+    <body>
+        <div id="bg">
+            <div id="blackLayer"></div>
+            <img src="./assets/imgs/Poster1.jpg"/>
+        </div>
+       
+        <div id="main">
+            <div id="image">
+                <img src="./assets/imgs/Poster1.jpg"/>
+            </div>
+            <div id="player">
+                <div id="songTitle">Demo</div>
+                <div id="buttons">
+                    <button id="pre" onclick="pre()"><img src="./assets/imgs/Pre.png" height="90%" width="90%"/></button>
+                    <button id="play" onclick="playOrPauseSong()"><img src="./assets/imgs/Pause.png"/></button>
+                    <button id="next" onclick="next()"><img src="./assets/imgs/Next.png" height="90%" width="90%"/></button>
+                </div>
+                
+                <div id="seek-bar">
+                    <div id="fill"></div>
+                    <div id="handle"></div>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/play.js"></script>
+    </body>
+</html>
